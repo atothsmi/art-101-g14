@@ -105,3 +105,62 @@ html, body {
   /* right: 0; */
 
 }
+
+ #walrus {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: auto;
+   width: 50vw;
+ }
+
+  #zebra {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50vw;
+
+  }
+
+  #otter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50vw;
+
+  }
+
+  #tiger2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50vw;
+
+  }
+
+  #fish {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50vw;
+  }
+
+#tiger1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 50vw;
+}
+
+#rhino {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 50vw;
+}
