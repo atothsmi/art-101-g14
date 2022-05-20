@@ -31,5 +31,5 @@ startButtonEl.click(function(){
 animalDivEls.append("<div class= 'timeline'>");
 
 for (var i = 0; i < animalDivEls.length; i++){
-  console.log(animalDivEls[i])
+  console.log(animalDivEls[i]);
 }

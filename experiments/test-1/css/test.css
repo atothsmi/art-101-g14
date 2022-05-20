@@ -22,6 +22,10 @@ body{
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   display: inline-flex; /* Creates a flexbox, that starts on same line as previous */
   overflow: auto;

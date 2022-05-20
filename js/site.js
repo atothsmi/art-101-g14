@@ -23,5 +23,4 @@ var mammothEl = $('#mammoth');
 mammothEl.click(function(){
   console.log('Button clicked')
   //Show a div that is already there
-
 });
