@@ -2,20 +2,21 @@ html, body {
   height: 100%; /*Makes box fill entire window, with no inner or outer padding*/
   margin: 0px;
   padding: 0px;
-  overflow-y: hidden; /*Hides vertical scrollbar*/
+  /* overflow-y: hidden; /*Hides vertical scrollbar*/
 }
 
 /* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-/* body::-webkit-scrollbar{
+body::-webkit-scrollbar{
   display: none;
-} */
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
-/* body{
+body{
   -ms-overflow-style: none;  /* IE and Edge */
-/* scrollbar-width: none;  /* Firefox */ /*} */
+  scrollbar-width: none;  /* Firefox */
+}
 
 .stopHorizonatalScroll {
   overflow-x: hidden;
@@ -36,6 +37,14 @@ html, body {
   width: 100vw; /*Makes box fill entire width*/
 }
 
+.timeline{
+  position: absolute;
+  height: 1%;
+  width: inherit;
+  bottom: 5%;
+  background: black;
+
+}
 
 /*Pastel Color Gradients*/
 .purple-pastel-gradient {
@@ -66,6 +75,8 @@ html, body {
   background-image: linear-gradient(to right,  #FFABAB,  #FFCCF9);
 }
 
+/* Credit: https://codepen.io/plavookac/pen/QMwObb */
+
 @keyframes move_wave {
     0% {
         transform: translateX(0) translateZ(0) scaleY(1)
@@ -77,36 +88,18 @@ html, body {
         transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
+
 .waveWrapper {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     height: 20%;
     left: 0;
     right: 0;
     bottom: 0;
-    top: 0;
     margin: auto;
-}
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+    opacity: 25%
 }
 
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-.bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
-}
-.bgBottom {
-    z-index: 5;
-}
 .wave {
     position: absolute;
     left: 0;
@@ -115,25 +108,23 @@ html, body {
     background-repeat: repeat no-repeat;
     background-position: 0 bottom;
     transform-origin: center bottom;
+    background-size: 50% 100px;
 }
+
 .waveTop {
-    background-size: 50% 100px;
+  animation: move_wave 12s linear infinite;
+  background-size: 50% 100%;
+  background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')
 }
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-}
+
 .waveMiddle {
-    background-size: 50% 120px;
-}
-.waveAnimation .waveMiddle {
     animation: move_wave 10s linear infinite;
+    background-size: 50% 80%;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')
 }
+
 .waveBottom {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
+    background-size: 50% 60%;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')
 }
