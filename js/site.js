@@ -15,3 +15,13 @@ startButtonEl.click(function(){
   console.log('Button clicked')
   bodyEl.removeClass('stopHorizonatalScroll');
 });
+
+//Find Mammoth Element
+var mammothEl = $('#mammoth');
+
+//On when mammoth is clicked, do something
+mammothEl.click(function(){
+  console.log('Button clicked')
+  //Show a div that is already there
+
+});
