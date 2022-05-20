@@ -8,14 +8,17 @@ html, body {
 /* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
   display: none;
-}
+} */
 
 /* Hide scrollbar for IE, Edge and Firefox */
-body{
+/* body{
   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* scrollbar-width: none;  /* Firefox */ /*} */
+
+.stopHorizonatalScroll {
+  overflow-x: hidden;
 }
 
 .container {
@@ -23,6 +26,7 @@ body{
   overflow: auto;
 
   height: inherit; /*Makes box fill entire window, with no inner or outer padding*/
+  /* width: 1000vw; */
   margin: inherit;
   padding: inherit;
   overflow-y: hidden; /*Hides vertical scrollbar*/
