@@ -66,21 +66,21 @@ html, body {
 }
 #title {
   color: #FF00FF;
-  font-size: 120px;
+  font-size: 80px;
   border-width: medium;
   border-style: dotted;
   border-color: black;
   text-align: center;
   margin: 8%;
-  font-family: "Times New Roman", Times, serif;
-  -webkit-text-stroke: 2px white;
+  font-family: 'Monoton', cursive;
+  -webkit-text-stroke: 1px #FF00FF;
 }
   #start {
     text-align: center;
     margin-left: 35%;
-    font-size: 175px;
+    font-size: 120px;
     color: #FF00FF;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Monoton', cursive;
     background-color: black;
     -webkit-text-stroke: 2px white;
 }
