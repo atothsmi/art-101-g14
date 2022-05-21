@@ -9,7 +9,6 @@
   height: auto;
   width: 50vw;
 
-
 .dot {
   background-color: red;
 @@ -160,62 +153,3 @@ html, body {
@@ -22,7 +21,7 @@
    margin-left: auto;
    margin-right: auto;
    height: auto;
-   width: 50vw;
+   width: 30vw;
  }
 
   #zebra {
@@ -30,7 +29,7 @@
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 50vw;
+    width: 40vw;
 
   }
 
