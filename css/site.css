@@ -140,13 +140,6 @@ html, body {
     -webkit-text-stroke: 2px white;
 }
 
-#mammoth {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 50vw;
-}
 
 .dot {
   background-color: red;
@@ -159,63 +152,4 @@ html, body {
   left: 0;
   /* right: 0; */
 
-}
-
- #walrus {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   height: auto;
-   width: 50vw;
- }
-
-  #zebra {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50vw;
-
-  }
-
-  #otter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50vw;
-
-  }
-
-  #tiger2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50vw;
-
-  }
-
-  #fish {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50vw;
-  }
-
-#tiger1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 50vw;
-}
-
-#rhino {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 50vw;
 }
