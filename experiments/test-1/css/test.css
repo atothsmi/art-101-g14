@@ -26,6 +26,12 @@ body{
   display: none;
 }
 
+.details-example {
+  position: absolute;
+  right: -100vw;
+  top: 100px;
+  width: 500px;
+}
 .container {
   display: inline-flex; /* Creates a flexbox, that starts on same line as previous */
   overflow: auto;
@@ -41,6 +47,7 @@ body{
   width: 100vw; /*Makes box fill entire width*/
 }
 
+/* Place Timeline stuff */
 .timeline{
   position: absolute;
   height: 1%;
@@ -48,6 +55,33 @@ body{
   bottom: 5%;
   background: black;
 
+}
+
+.dates {
+  position: absolute;
+
+  left: 45%;
+  bottom: 500%;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+
+  text-align: center;
+}
+
+.line-to-date {
+  position: absolute;
+
+  left: 45%;
+  bottom: -65%;
+
+  height: 75%;
+  width: 5px;
+  background: black;
 }
 
 /*Pastel Color Gradients*/
