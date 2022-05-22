@@ -47,7 +47,7 @@ var datesEls = $('.dates>p');
 
 //Place info into animal dates holders
 for (var i = 0; i < datesEls.length; i++){
-  console.log(animalInfo.when)
+  console.log(animalInfo[i].when)
   datesEls[i].append(animalInfo[i].when);
 }
 

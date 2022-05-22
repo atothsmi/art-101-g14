@@ -1,0 +1,36 @@
+/* Place Timeline stuff */
+.timeline{
+  position: absolute;
+  height: 1%;
+  width: inherit;
+  bottom: 5%;
+  background: black;
+
+}
+
+.dates {
+  position: absolute;
+
+  left: 45%;
+  bottom: 500%;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+
+  text-align: center;
+}
+
+.line-to-date {
+  position: absolute;
+
+  left: 45%;
+  bottom: -65%;
+
+  height: 75%;
+  width: 5px;
+  background: black;
+}

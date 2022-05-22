@@ -32,6 +32,7 @@ body{
   top: 100px;
   width: 500px;
 }
+
 .container {
   display: inline-flex; /* Creates a flexbox, that starts on same line as previous */
   overflow: auto;
