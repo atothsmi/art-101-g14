@@ -156,22 +156,43 @@ body{
     background-color: black;
     -webkit-text-stroke: 2px white;
 }
-
-
-/* css for pop up text boxes */
-/* I used class to edit all of the text boxes the same (content will be different in html) */
-.poptext1 {
-  height: 100px;
-  width: 100px;
-  border-style: dotted;
-  border-color: #FF00FF;
-  margin-right: 5%;
-  font-size: 18px;
-  background-color: white;
-  display: none;
-  padding: 10px;
-  font-family: 'Big Shoulders Stencil Display', cursive;
-
-  //*link for ^this font to put into html heading
-/* <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@200&family=Iceland&family=Monoton&display=swap" rel="stylesheet"> */
+#mammothDetails {
+  font-size: 25px;
+  color: #9400D3;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#walrusDetails {
+  font-size: 25px;
+  color: #008080;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#zebraDetails {
+  font-size: 25px;
+  color: #9ACD32;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#otterDetails {
+  font-size: 25px;
+  color: #FA8072;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#tiger2Details {
+  font-size: 25px;
+  color: #FF1493;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#fishDetails {
+  font-size: 25px;
+  color: #BA55D3;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#tiger1Details {
+  font-size: 25px;
+  color: #4B0082;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+}
+#rhinoDetails {
+  font-size: 25px;
+  color: #00008B;
+  font-family: 'Big Shoulders Stencil Text', cursive;
 }
