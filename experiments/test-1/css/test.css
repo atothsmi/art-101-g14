@@ -3,6 +3,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   /* overflow-y: hidden; /*Hides vertical scrollbar*/
+  scroll-behavior: smooth;
 }
 
 /* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */

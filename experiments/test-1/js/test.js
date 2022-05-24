@@ -13,7 +13,6 @@ var animalInfo = [
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_scrollX
 function scrollX(width) {
   window.scrollBy(width, 0);
-  alert("pageXOffset: " + window.scrollX + ", scrollY: " + window.scrollY);
 }
 
 //Find Start Button
@@ -72,3 +71,11 @@ var mammothEl = $('#mammoth');
 mammothEl.click(function(){
   detailsEls.toggleClass('hidden')
 });
+
+
+//Everytime it is scrolled
+//If not on last page
+  //Show right scrolling button
+//else hide the scrolling button
+
+//Or increment variable everytime scrolled and when it's a certain length disappear buttons

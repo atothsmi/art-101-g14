@@ -1,3 +1,9 @@
+/*
+ * Group 14
+ * JS for all functions of index.html site
+*/
+
+//Define array of all animal info
 var animalInfo = [
   {when:'1650 B.C',
     why:'Climate change and hunting ',
@@ -10,11 +16,11 @@ var animalInfo = [
   {when:'1883',
     why:'Hunted to Extinction to preserve feed for domesticated animals and for their hides',
     name:'Quagga',
-    habitat:' South Africa, grasslands and savannas'},
+    habitat:' South Africa, grasslands/savannas'},
   {when:'1894',
     why:'Hunting pressure for its fur by European settlers',
     name:'Sea Mink',
-    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts or off-shore islands'},
+    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts/off-shore islands'},
   {when:'1936',
     why:'considered a threat to livestock and a danger to people',
     name:'Tasmanian Tiger',
@@ -33,6 +39,7 @@ var animalInfo = [
     habitat:'savannahs and dry forests'}
 ]
 
+//Function scrolls page forward 1 viewport
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_scrollX
 function scrollX(width) {
   window.scrollBy(width, 0);
@@ -54,6 +61,8 @@ startButtonEl.click(function(){
   scrollX(window.innerWidth);
 });
 
+/*Place timeline about extinctions*/
+
 //Find all of the divs inside of container
 var animalDivEls = $('.animal-div');
 // console.log(animalDivEls)
@@ -69,6 +78,9 @@ for (var i = 0; i < datesEls.length; i++){
   // console.log(animalInfo[i].when)
   datesEls[i].append(animalInfo[i].when);
 }
+
+
+/*Place information about extinctions*/
 
 //Create list of all of the category names
 var categories = ['name', 'habitat', 'when', 'why'];
@@ -86,6 +98,8 @@ for (category of categories){
     detailsEls[i].append(animalInfo[i][category]);
   }
 }
+
+/*Add Mouse click event for every animal to show animal info*/
 
 //Find mammoth image
 var mammothEl = $('#mammoth');
