@@ -105,6 +105,20 @@ body{
   -webkit-text-stroke: 2px white;
 }
 
+#question {
+  color: #FF00FF;
+  font-size: 8em;
+  /* border-width: medium;
+  border-style: solid;
+  border-color: black;
+  border-radius: 20px; */
+  text-align: center;
+  font-weight: normal;
+  margin: 6%;
+  font-family: 'Monoton', cursive;
+  -webkit-text-stroke: 1px #FF00FF;
+}
+
 /* Specificly used to toggle one appearance apsect */
 .stopHorizonatalScroll {
   overflow-x: hidden;
