@@ -10,6 +10,10 @@ var animalInfo = [
   {when:'2011',why:'poaching & farmers defending their crops', name:'West African Black Rhinoceros', habitat:'savannahs and dry forests'}
 ]
 
+$("#body").on( 'scroll', function(){
+   console.log($('.container').prop('scrollLeft'))
+});
+
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_scrollX
 function scrollX(width) {
   window.scrollBy(width, 0);
@@ -17,11 +21,14 @@ function scrollX(width) {
 
 //Find Start Button
 var startButtonEl = $('#start');
-console.log(startButtonEl);
+// console.log(startButtonEl);
 
 //Find body
 var bodyEl = $('body');
-console.log(bodyEl);
+// console.log(bodyEl);
+
+var htmlEl = $('html');
+console.log(htmlEl);
 
 //Find Begining of Slideshow
 var startEl = $('#first-slide');
@@ -29,12 +36,12 @@ console.log(startEl);
 
 //Find all of the divs inside of container
 var animalDivEls = $('.animal-div');
-console.log(animalDivEls)
+// console.log(animalDivEls)
 
 //Scroll screen full width to the right
 startButtonEl.click(function(){
   console.log('Button clicked')
-  bodyEl.removeClass('stopHorizonatalScroll');
+  htmlEl.removeClass('stopHorizonatalScroll');
   scrollX(window.innerWidth);
 });
 
@@ -71,11 +78,3 @@ var mammothEl = $('#mammoth');
 mammothEl.click(function(){
   detailsEls.toggleClass('hidden')
 });
-
-
-//Everytime it is scrolled
-//If not on last page
-  //Show right scrolling button
-//else hide the scrolling button
-
-//Or increment variable everytime scrolled and when it's a certain length disappear buttons

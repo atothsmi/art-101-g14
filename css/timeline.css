@@ -3,8 +3,8 @@
   position: absolute;
   height: 1%;
   width: inherit;
-  bottom: 5%;
-  background: black;
+  bottom: 15%;
+  background: rgb(255, 255, 255);
 
 }
 
@@ -14,14 +14,19 @@
   left: 45%;
   bottom: 500%;
 
-  height: 50px;
-  width: 50px;
   border-radius: 50%;
 
-  background: black;
-  color: white;
+  color: gray;
 
   text-align: center;
+  font-size: auto;
+
+  padding: 1%;
+  background: rgb(255, 255, 255);
+}
+
+.dates>p{
+  margin: 0px;
 }
 
 .line-to-date {
@@ -32,5 +37,5 @@
 
   height: 75%;
   width: 5px;
-  background: black;
+  background: rgb(255, 255, 255);
 }

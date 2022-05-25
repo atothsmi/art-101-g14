@@ -1,5 +1,15 @@
-#title {
-  font-weight: normal;
+/* Change appearance of all detail divs */
+.details {
+  font-size: 25px;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  background: rgba(255, 255, 255, 0.25);
+
+  position: absolute;
+  top: 15%;
+  width: 25%;
+  margin: 10%;
+  padding: 1%;
+  border-radius: 10px;
 }
 
 #mammoth {
@@ -19,7 +29,7 @@
    width: 45vw;
  }
 
-  #zebra {
+#zebra {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -28,7 +38,7 @@
 
   }
 
-  #otter {
+#otter {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -37,7 +47,7 @@
 
   }
 
-  #tiger2 {
+#tiger2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +56,7 @@
 
   }
 
-  #fish {
+#fish {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -68,4 +78,34 @@
   margin-right: auto;
   height: auto;
   width: 50vw;
+}
+
+#mammothDetails {
+  color: #9400D3;
+}
+
+#walrusDetails {
+  color: #008080;
+}
+#zebraDetails {
+  color: #9ACD32;
+}
+
+#otterDetails {
+  color: #FA8072;
+}
+
+#tiger2Details {
+  color: #FF1493;
+}
+
+#fishDetails {
+  color: #BA55D3;
+}
+
+#tiger1Details {
+  color: #4B0082;
+}
+#rhinoDetails {
+  color: #00008B;
 }

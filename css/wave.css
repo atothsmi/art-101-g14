@@ -1,0 +1,53 @@
+/* Credit: https://codepen.io/plavookac/pen/QMwObb */
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: fixed;
+    height: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 25%;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+    background-size: 50% 100px;
+}
+
+.waveTop {
+  animation: move_wave 12s linear infinite;
+  background-size: 50% 100%;
+  background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')
+}
+
+.waveMiddle {
+    animation: move_wave 10s linear infinite;
+    background-size: 50% 80%;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')
+}
+
+.waveBottom {
+    animation: move_wave 15s linear infinite;
+    background-size: 50% 60%;
+    background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')
+}

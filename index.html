@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class='smoothScroll'>
   <head>
     <!-- <audio id="myAudio" controls autoplay>
       <source src="rainforest-sounds.ogg" type="audio/ogg">
@@ -9,19 +9,24 @@
     <p></p>
     <button onclick="myFunction()">Try it</button> -->
     <meta charset="utf-8">
-    <title></title>
+    <title>Extinction Party</title>
+
+    <!-- Links to the Google fonts we used -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&family=Monoton&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
+
+    <!-- Links to our JS Files -->
+    <script type="text/javascript" src="js/infoPlacement.js" defer></script>
+    <script type="text/javascript" src="js/animalEvents.js" defer></script>
     <script type="text/javascript" src="js/site.js" defer></script>
+
+    <!-- Links to our stylesheets -->
 	  <link rel="stylesheet" type="text/css" href="css/site.css">
-    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/wave.css">
     <link rel='stylesheet' type='text/css' href='css/timeline.css'>
     <link rel='stylesheet' type='text/css' href='css/animal.css'>
 
@@ -37,8 +42,8 @@
 
     <div class='container'>
 
-      <div class="full-width-div purple-pastel-gradient">
-        <h1 id="title">Timeline For Extinct Animals!</h1>
+      <div id='title-div' class="full-width-div purple-pastel-gradient">
+        <h1 id="title">Extinction Party</h1>
         <button type="button" name="start" id='start'>Start</button>
       </div>
 
@@ -47,12 +52,12 @@
 
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='mammothDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -61,12 +66,12 @@
 
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='walrusDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -74,12 +79,12 @@
         <img id='zebra' src="img/scans/zebra.png" alt="zebra">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='zebraDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -87,12 +92,12 @@
         <img id='otter' src="img/scans/otter.png" alt="otter">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='otterDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -100,12 +105,12 @@
         <img id='tiger2' src="img/scans/tiger2.png" alt="tiger2">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='tiger2Details' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -113,12 +118,12 @@
         <img id='fish' src="img/scans/fish.png" alt="fish">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='fishDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -126,12 +131,12 @@
         <img id='tiger1' src="img/scans/tiger1.png" alt="tiger1">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='tiger1Details' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
       </div>
 
@@ -139,13 +144,18 @@
         <img id='rhino' src="img/scans/rhino.png" alt="rhino">
         <!--Source: https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html -->
         <details id='rhinoDetails' class="details hidden">
-            <summary class='name'>Extinction Information:<br></summary>
-            <ul>
-                <li class='habitat'>Habitat: </li>
-                <li class='when'>Extinction Date: </li>
-                <li class='why'>Reason: </li>
-            </ul>
+            <summary class='name'></summary>
+            <dl>
+                <dt class='habitat'>Habitat: </dt>
+                <dt class='when'>Extinction Date: </dt>
+                <dt class='why'>Reason: </dt>
+            </dl>
         </details>
+      </div>
+
+      <div class="full-width-div green-pastel-gradient">
+        Final Div
+        <button type="button" name="start" id='restart'>Restart</button>
       </div>
 
     </div>
