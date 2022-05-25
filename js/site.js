@@ -7,11 +7,11 @@
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_scrollX
 function scrollForward(width) {
   window.scrollBy(width, 0);
-  //alert("pageXOffset: "  + ", scrollY: " + window.scrollY);
+  //alert("pageXOffset: " + window.scrollX + ", scrollY: " + window.scrollY);
 }
 
 //Total number of full length divs - 1
-var totalFullWidthDivs = 10-1;
+var totalFullWidthDivs = 11-1;
 
 //Find Start Button
 var startButtonEl = $('#start');
@@ -25,12 +25,34 @@ var bodyEl = $('body');
 var htmlEl = $('html');
 console.log(htmlEl);
 
+//Number of times advanced
+var timesAdvanced = 0;
+
+//Find forward buttons
+var forwardEl = $('#forward');
+forwardEl.hide();
+
+//Scroll to right until at end
+forwardEl.click(function(){
+  // console.log('Button clicked')
+  if (timesAdvanced < totalFullWidthDivs - 2 ){
+    scrollForward(window.innerWidth);
+    timesAdvanced += 1;
+  } else {
+    scrollForward(window.innerWidth);
+    forwardEl.hide();
+    timesAdvanced = 0;
+  }
+
+});
+
 //Scroll screen full width to the right on start button click
 startButtonEl.click(function(){
   // console.log('Button clicked')
   htmlEl.addClass('smoothScroll');
   bodyEl.removeClass('stopHorizonatalScroll');
   scrollForward(window.innerWidth);
+  forwardEl.show();
 });
 
 //Find restart buttons
@@ -43,13 +65,3 @@ restartEl.click(function(){
   htmlEl.removeClass('smoothScroll');
   scrollForward(-window.innerWidth * totalFullWidthDivs)
 });
-
-$("body").on( 'scroll', function(){
-   console.log($('body').prop('scrollTop'))
-});
-//Everytime it is scrolled
-//If not on last page
-  //Show right scrolling button
-//else hide the scrolling button
-
-//Or increment variable everytime scrolled and when it's a certain length disappear buttons

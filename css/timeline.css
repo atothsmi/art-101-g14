@@ -16,10 +16,11 @@
 
   border-radius: 50%;
 
-  color: gray;
+  color: #FF00FF;
 
   text-align: center;
   font-size: auto;
+  font-family: sans-serif;
 
   padding: 1%;
   background: rgb(255, 255, 255);
