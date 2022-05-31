@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class='smoothScroll'>
   <head>
-    <!-- <audio id="myAudio" controls autoplay>
-      <source src="rainforest-sounds.ogg" type="audio/ogg">
-      <source src="rainforest-sounds.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <p></p>
-    <button onclick="myFunction()">Try it</button> -->
     <meta charset="utf-8">
     <title>Extinction Party</title>
 
@@ -30,6 +23,12 @@
     <link rel='stylesheet' type='text/css' href='css/timeline.css'>
     <link rel='stylesheet' type='text/css' href='css/animal.css'>
 
+    <!-- Audio Elements to load -->
+    <audio id="background-music" loop>
+      <source src="eyy.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
   </head>
 
   <body class='stopHorizonatalScroll'>
@@ -40,11 +39,18 @@
         <div class="wave waveBottom" ></div>
     </div>
 
-    <button id='forward'>></button>
+    <div class="settings-div full-width-div">
+      <button type="button" name"settings" id='settings'></button>
+      <button type="button" name"settings" id='toggleButtons'>Toggle Buttons</button>
+      <button type="button" name"settings" id='audioControl'>Background Music</button>
+      <button id='forward'>></button>
+
+    </div>
 
     <div class='container'>
 
       <div id='title-div' class="full-width-div purple-pastel-gradient">
+
         <h1 id="title">Extinction Party</h1>
         <button type="button" name="start" id='start'>Start</button>
       </div>

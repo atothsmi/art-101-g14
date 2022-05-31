@@ -31,6 +31,13 @@ body{
   overflow-y: hidden; /*Hides vertical scrollbar*/
 }
 
+.settings-div {
+  display: inline-flex;
+  margin: 2.5%;
+  position: fixed;
+  bottom: 0px;
+}
+
 #title {
   color: #FF00FF;
   font-size: 8em;
@@ -69,7 +76,6 @@ body{
   width: 50px;
   position: fixed;
   right: 5%;
-  bottom: 4.5%;
 
   color: #FF00FF;
   font-size: 25px;
@@ -132,6 +138,49 @@ body{
   font-family: 'Big Shoulders Stencil Text', cursive;
   background: rgba(255, 255, 255, 0.25);
 }
+
+#settings {
+  min-height: 50px;
+  min-width: 50px;
+  text-align: center;
+  margin-right: 5px;
+
+  color: #FF00FF;
+
+  border-radius: 10px;
+  border-color: #FF00FF;
+  border-width: 5px;
+
+  background-image: url(../img/buttons/settings-button.png);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.25);
+
+}
+
+#toggleButtons, #audioControl {
+  min-height: 50px;
+  min-width: 50px;
+  text-align: center;
+  margin-left: 5px;
+
+  color: #FF00FF;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+
+  border-radius: 10px;
+  border-color: #FF00FF;
+  border-width: 5px;
+
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.25);
+
+}
+
+#slideInstruct {
+  font-size: 50px;
+}
+
 
 /* Specificly used to toggle one appearance apsect */
 .stopHorizonatalScroll {

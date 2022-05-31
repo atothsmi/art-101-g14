@@ -50,7 +50,7 @@ forwardEl.click(function(){
 startButtonEl.click(function(){
   // console.log('Button clicked')
   htmlEl.addClass('smoothScroll');
-  bodyEl.removeClass('stopHorizonatalScroll');
+  //bodyEl.removeClass('stopHorizonatalScroll');
   scrollForward(window.innerWidth);
   forwardEl.show();
 });
@@ -63,5 +63,46 @@ var restartEl = $('#restart');
 restartEl.click(function(){
   // console.log('Button clicked')
   htmlEl.removeClass('smoothScroll');
-  scrollForward(-window.innerWidth * totalFullWidthDivs)
+  scrollForward(-window.innerWidth * totalFullWidthDivs);
+});
+
+//Make audio play and stop
+
+//Find button controlling audio and hide it to start
+var audioControlEl = $('#audioControl');
+audioControlEl.hide();
+
+//Find audio element
+var audioBkgEl = $('#background-music');
+
+audioControlEl.click(function(){
+  if (audioBkgEl[0].paused){
+    audioBkgEl[0].play();
+  } else {
+    audioBkgEl[0].pause();
+  };
+  console.log(audioBkgEl[0].paused);
+});
+
+//Hide Toggle Buttons at start
+var toggleButtonsEl = $('#toggleButtons');
+toggleButtonsEl.hide();
+
+//Show Settings buttons
+var settingButtonEl = $('#settings');
+settingButtonEl.click(function(){
+  toggleButtonsEl.toggle();
+  audioControlEl.toggle();
+});
+
+//Toggle navigation Buttons
+toggleButtonsEl.click(function(){
+  if (startButtonEl.is(":visible")){
+    $('#title').append('<p id="slideInstruct"> Scroll to View =>');
+  } else {
+    $('#slideInstruct').remove();
+  }
+  startButtonEl.toggle();
+  bodyEl.toggleClass('stopHorizonatalScroll');
+  restartEl.toggle();
 });
