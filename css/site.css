@@ -38,6 +38,15 @@ body{
   bottom: 0px;
 }
 
+#call-to-action {
+  position: absolute;
+}
+
+#call-to-action>.currently-endangered {
+  position: absolute;
+  width: 10%;
+}
+
 #title {
   color: #FF00FF;
   font-size: 8em;
@@ -180,7 +189,6 @@ body{
 #slideInstruct {
   font-size: 50px;
 }
-
 
 /* Specificly used to toggle one appearance apsect */
 .stopHorizonatalScroll {

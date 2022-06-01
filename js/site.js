@@ -17,6 +17,9 @@ var totalFullWidthDivs = 11-1;
 var startButtonEl = $('#start');
 // console.log(startButtonEl);
 
+//Create boolean to see if start button has been clicked
+var startClicked = false;
+
 //Find body
 var bodyEl = $('body');
 // console.log(bodyEl);
@@ -40,6 +43,7 @@ forwardEl.click(function(){
     timesAdvanced += 1;
   } else {
     scrollForward(window.innerWidth);
+    startClicked = false;
     forwardEl.hide();
     timesAdvanced = 0;
   }
@@ -52,6 +56,7 @@ startButtonEl.click(function(){
   htmlEl.addClass('smoothScroll');
   //bodyEl.removeClass('stopHorizonatalScroll');
   scrollForward(window.innerWidth);
+  startClicked = true;
   forwardEl.show();
 });
 
@@ -97,11 +102,19 @@ settingButtonEl.click(function(){
 
 //Toggle navigation Buttons
 toggleButtonsEl.click(function(){
+  //Change out starting button for instructions
   if (startButtonEl.is(":visible")){
     $('#title').append('<p id="slideInstruct"> Scroll to View =>');
   } else {
     $('#slideInstruct').remove();
-  }
+  };
+
+  //If Start was clicked at some point, bring back forward navigation
+  if (startClicked == true){
+    forwardEl.toggle();
+  };
+
+  //Toggle Start and Restart Button and allow free scrolling
   startButtonEl.toggle();
   bodyEl.toggleClass('stopHorizonatalScroll');
   restartEl.toggle();
