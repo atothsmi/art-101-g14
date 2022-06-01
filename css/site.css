@@ -19,6 +19,12 @@ body{
   scrollbar-width: none;  /* Firefox */
 }
 
+a:-webkit-any-link {
+    color: #FF00FF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 /* Changes appearance of all animal divs */
 .container {
   display: inline-flex; /* Creates a flexbox, that starts on same line as previous */
@@ -43,8 +49,19 @@ body{
 }
 
 #call-to-action>.currently-endangered {
+  display: none;
   position: absolute;
   width: 10%;
+
+  color: #FF00FF;
+  /* font-size: 1.75em; */
+  border-width: thin;
+  border-style: solid;
+  border-color: #FF00FF;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Big Shoulders Stencil Text', cursive;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 #title {
@@ -127,11 +144,13 @@ body{
   border-style: solid;
   border-color: black;
   border-radius: 20px; */
+  background: transparent;
+  border-style: none;
   text-align: center;
   font-weight: normal;
   margin: 6%;
   font-family: 'Monoton', cursive;
-  -webkit-text-stroke: 1px #FF00FF;
+  -webkit-text-stroke: 1px white;
 }
 
 #credits {
