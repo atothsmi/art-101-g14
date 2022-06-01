@@ -81,9 +81,14 @@ a:-webkit-any-link {
   #start {
     display: flex;
     min-height: 100px;
+    width: auto;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
+    position: absolute;
+    left: 37%;
+    right: 37%;
 
     font-size: 100px;
     color: #FF00FF;
