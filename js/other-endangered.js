@@ -27,7 +27,7 @@
          loadSlow(data)
          .then(
            function(value){
-             disappearClick();
+             // disappearClick();
              console.log('done');
            },
            function(error){
@@ -78,22 +78,21 @@
      //Show div after it has been moved
      $(idCurrentAnimal).show();
 
+    //Give the newly created div an event
+    disappearClick(idCurrentAnimal);
+
     //Increment the current animal number
      currentAnimal +=1
 
      //Wait an amount of time
-     await timer(250); // then the created Promise can be awaited
+     await timer(100); // then the created Promise can be awaited
    }
  }
 
-async function disappearClick(){
-  $('.currently-endangered').map(num => {
-
-    //console.log($('#' + num));
-    $('#' + num).click(function(){
-      console.log(num);
-      $('#' + num).hide();
-    });
+function disappearClick(id){
+  //console.log($('#' + num));
+  $(id).click(function(){
+    $(id).hide();
   });
 };
 

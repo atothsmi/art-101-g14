@@ -80,6 +80,7 @@ audioControlEl.hide();
 //Find audio element
 var audioBkgEl = $('#background-music');
 
+//When control button is pushed, alternate pausing/playing sound
 audioControlEl.click(function(){
   if (audioBkgEl[0].paused){
     audioBkgEl[0].play();
