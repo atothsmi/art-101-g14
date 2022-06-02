@@ -16,7 +16,6 @@
     <script type="text/javascript" src="js/info-placement.js" defer></script>
     <script type="text/javascript" src="js/animal-events.js" defer></script>
     <script type="text/javascript" src="js/other-endangered.js" defer></script>
-    <script type="text/javascript" src="js/party-effects.js" defer></script>
     <script type="text/javascript" src="js/site.js" defer></script>
 
 
@@ -35,8 +34,12 @@
       <source src="audio/img-intel.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
-    <audio id="sfx1" loop>
+    <audio id="sfx1">
       <source src="audio/bloop-fx.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="sfx2">
+      <source src="audio/pop.m4a">
       Your browser does not support the audio element.
     </audio>
 
@@ -53,7 +56,9 @@
     <div class="settings-div full-width-div">
       <button type="button" name"settings" id='settings'></button>
       <button type="button" name"settings" id='toggleButtons'>Toggle Buttons</button>
-      <button type="button" name"settings" id='audioControl'>Background Music</button>
+      <button type="button" name"settings" id='audioControl'>Background Music: OFF</button>
+      <button id='instruct'>Instructions</button>
+      <p id='textInstruct'>Click the images for more content!</p>
       <button id='forward'>></button>
 
     </div>
@@ -189,11 +194,11 @@
         <div id='credits'>
           Credits
           <dl>
-              <dt>Name 1: Stuff You Did</dt>
-              <dt>Name 2: Stuff You Did</dt>
-              <dt>Name 3: Stuff You Did</dt>
-              <dt>Name 3: Stuff You Did</dt>
-              <dt>Name 3: Stuff You Did</dt>
+              <dt>Programmer: Alia Toth-Smith</dt>
+              <dt>Website Design/Artist(Animals 5-8): LJ Mcdermott</dt>
+              <dt>Sound Engineer: Myles Rider-Alexis</dt>
+              <dt>Research/Assets: Paige Anderson</dt>
+              <dt>Artist(Animals 1-4): Stuff Nathan Casey</dt>
           </dl>
         </div>
         <button type="button" name="start" id='restart'>Restart</button>

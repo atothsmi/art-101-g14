@@ -26,10 +26,18 @@ var bodyEl = $('body');
 
 //Find html
 var htmlEl = $('html');
-console.log(htmlEl);
+// console.log(htmlEl);
 
 //Number of times advanced
 var timesAdvanced = 0;
+
+//Find instructions button
+var instructEl = $('#instruct');
+
+//When clicked toggle showing instruction text
+instructEl.click(function(){
+  $('#textInstruct').toggle();
+});
 
 //Find forward buttons
 var forwardEl = $('#forward');
@@ -64,9 +72,17 @@ startButtonEl.click(function(){
     //Start new background music
     audioBkg2El[0].play();
   };
+
+  if (playing == true){
+    audioControlEl.html('Background Music: ON');
+  } else {
+    audioControlEl.html('Background Music: OFF');
+  }
+  
   //Set audio button to control other track
   musicTrack = 1;
   forwardEl.show();
+  instructEl.hide();
 });
 
 //Find restart buttons
@@ -87,6 +103,7 @@ restartEl.click(function(){
   };
   //Set audio button to control other track
   musicTrack = 0;
+  instructEl.show();
 });
 
 //Make audio play and stop
@@ -128,6 +145,12 @@ audioControlEl.click(function(){
     };
     console.log(audioBkg2El[0].paused);
   };
+
+  if (playing == true){
+    audioControlEl.html('Background Music: ON');
+  } else {
+    audioControlEl.html('Background Music: OFF');
+  }
 
 });
 

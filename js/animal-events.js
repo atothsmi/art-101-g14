@@ -92,3 +92,60 @@ rhinoEl.click(function(){
   var infoBoxEl = $('#rhinoDetails');
   infoBoxEl.toggleClass('hidden');
 });
+
+//Array of all animalDivEls
+var animalDivEls = [mammothEl, walrusEl, zebraEl, otterEl, fishEl, tiger2El, tiger1El, rhinoEl];
+
+//Array of left or right placement
+var xAxis = ['balloons-right', 'balloons-right', 'balloons-left', 'balloons-left']
+
+//Array of top, bottom, or middle placement
+var yAxis = ['balloons-bottom', 'balloons-top', 'balloons-bottom', 'balloons-top']
+
+//Place a whole bunch of balloons
+function placeBalloons(){
+
+  //number of current div
+  var currentDiv = 0;
+
+  //For each animal div
+  for (animalDiv of animalDivEls){
+    //number of balloons 4
+    var numBalloons = 4
+
+    for (var i = 0; i < numBalloons; i++){
+      //Create id for balloon
+      var idBalloon = 'balloon' + currentDiv + '' + i;
+
+      //Insert the balloons after the first element of the divs
+      //Style it with a certain class to determine placement
+      animalDiv.after('<div class="balloons '+ xAxis[i] + ' ' + yAxis[i] + '" id="' + idBalloon + '">');
+
+      //Give each balloon an event that makes it play a sound and dissappear on click
+      popClick("#" + idBalloon);
+
+      // console.log(currentDiv);
+      // console.log(randomNumBalloons);
+    };
+
+    currentDiv++
+  };
+
+}
+
+var audioSfxEl = $('#sfx1');
+
+function popClick(id){
+  //console.log($('#' + num));
+  $(id).click(function(){
+    audioSfxEl[0].play();
+    $(id).hide();
+  });
+};
+
+placeBalloons()
+
+// .then(
+//  $('.balloons').on('click', function(){
+//    $('.balloons').hide();
+//  }));

@@ -54,6 +54,8 @@
    var currentAnimal = 0;
    var windowHeight = window.innerHeight;
    for (animal of data.data){
+     console.log(currentAnimal);
+     console.log(animal);
      //Construct Div to display data from API
      var display = '<div class="currently-endangered" id='+ currentAnimal + '>';
      //Add link to website with more info to animal Name
@@ -77,6 +79,7 @@
 
      //Show div after it has been moved
      $(idCurrentAnimal).show();
+     console.log($(idCurrentAnimal));
 
     //Give the newly created div an event
     disappearClick(idCurrentAnimal);
