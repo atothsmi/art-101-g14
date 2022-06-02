@@ -57,6 +57,15 @@ startButtonEl.click(function(){
   //bodyEl.removeClass('stopHorizonatalScroll');
   scrollForward(window.innerWidth);
   startClicked = true;
+  //If there is background music playing
+  if (playing == true){
+    //Stop old background music
+    audioBkgEl[0].pause();
+    //Start new background music
+    audioBkg2El[0].play();
+  };
+  //Set audio button to control other track
+  musicTrack = 1;
   forwardEl.show();
 });
 
@@ -69,6 +78,15 @@ restartEl.click(function(){
   // console.log('Button clicked')
   htmlEl.removeClass('smoothScroll');
   scrollForward(-window.innerWidth * totalFullWidthDivs);
+  //If audio is playing
+  if (playing == true){
+    //Stop old background music
+    audioBkg2El[0].pause();
+    //Start new background music
+    audioBkgEl[0].play();
+  };
+  //Set audio button to control other track
+  musicTrack = 0;
 });
 
 //Make audio play and stop
@@ -77,17 +95,40 @@ restartEl.click(function(){
 var audioControlEl = $('#audioControl');
 audioControlEl.hide();
 
-//Find audio element
+//Find audio elements
 var audioBkgEl = $('#background-music');
+var audioBkg2El = $('#background-music2');
+
+//Create variable to set what music is currently playing
+var musicTrack = 0;
+
+//Create variable to track if music is playing
+var playing = true;
 
 //When control button is pushed, alternate pausing/playing sound
 audioControlEl.click(function(){
-  if (audioBkgEl[0].paused){
-    audioBkgEl[0].play();
+  //Play track background-music
+  if (musicTrack == 0){
+    if (audioBkgEl[0].paused){
+      audioBkgEl[0].play();
+      playing = true;
+    } else {
+      audioBkgEl[0].pause();
+      playing = false;
+    };
+    console.log(audioBkgEl[0].paused);
+    //Play track background music 2
   } else {
-    audioBkgEl[0].pause();
+    if (audioBkg2El[0].paused){
+      audioBkg2El[0].play();
+      playing = true;
+    } else {
+      audioBkg2El[0].pause();
+      playing = false;
+    };
+    console.log(audioBkg2El[0].paused);
   };
-  console.log(audioBkgEl[0].paused);
+
 });
 
 //Hide Toggle Buttons at start
