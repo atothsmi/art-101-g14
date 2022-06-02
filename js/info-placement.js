@@ -86,6 +86,5 @@ for (category of categories){
     //console.log(detailsEls[i]);
     //Append the correct information
     detailsEls[i].append(animalInfo[i][category]);
-    console.log(category)
   }
 }
