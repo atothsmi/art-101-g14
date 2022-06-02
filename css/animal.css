@@ -16,12 +16,28 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+.balloons {
+  position: absolute;
+  background-image: url(../img/buttons/balloons.png);
+  background-size:  contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 150px;
+}
+
+.name {
+  cursor: pointer;
+}
+
 #mammoth {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: auto;
   width: 50vw;
+
+  cursor: pointer;
 
 }
 
@@ -31,6 +47,8 @@
    margin-right: auto;
    height: auto;
    width: 45vw;
+
+   cursor: pointer;
  }
 
 #zebra {
@@ -39,6 +57,8 @@
     margin-right: auto;
     height: auto;
     width: 40vw;
+
+    cursor: pointer;
 
   }
 
@@ -49,6 +69,7 @@
     height: auto;
     width: 50vw;
 
+    cursor: pointer;
   }
 
 #tiger2 {
@@ -58,6 +79,8 @@
     height: auto;
     width: 50vw;
 
+    cursor: pointer;
+
   }
 
 #fish {
@@ -66,6 +89,8 @@
     margin-right: auto;
     height: auto;
     width: 50vw;
+
+    cursor: pointer;
   }
 
 #tiger1 {
@@ -74,6 +99,8 @@
   margin-right: auto;
   height: auto;
   width: 50vw;
+
+  cursor: pointer;
 }
 
 #rhino {
@@ -82,6 +109,8 @@
   margin-right: auto;
   height: auto;
   width: 50vw;
+
+  cursor: pointer;
 }
 
 #mammothDetails {
