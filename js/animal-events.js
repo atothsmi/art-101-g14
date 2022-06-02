@@ -138,8 +138,10 @@ var audioSfxEl = $('#sfx1');
 function popClick(id){
   //console.log($('#' + num));
   $(id).click(function(){
-    audioSfxEl[0].play();
-    $(id).hide();
+    if (audioSfxEl[0].paused){
+      audioSfxEl[0].play();
+      $(id).hide();
+    };
   });
 };
 
