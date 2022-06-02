@@ -12,6 +12,10 @@
   border-radius: 10px;
 }
 
+.details>img{
+  max-width: 100%;
+  max-height: 100%;
+}
 #mammoth {
   display: block;
   margin-left: auto;

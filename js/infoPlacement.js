@@ -8,35 +8,47 @@ var animalInfo = [
   {when:'1650 B.C.',
     why:'Climate change and hunting ',
     name:'Woolly Mammoth - Mammuthus primigenius',
-    habitat:'Tundra of Europe, Asia, and North America'},
+    habitat:'Tundra of Europe, Asia, and North America',
+    img: '<img src="img/irl/mammoth.jpg">'
+  },
   {when:'1768',
     why:'Climate change and overhunting by humans',
     name:'Stellers Sea Cow',
-    habitat:'Aleutians and the Kamchatka Penninula'},
+    habitat:'Aleutians and the Kamchatka Penninula',
+    img: '<img src="img/irl/walrus.jpg">'
+  },
   {when:'1883',
     why:'Overhunted to preserve feed for domesticated animals and for their hides',
     name:'Quagga',
-    habitat:' South Africa, grasslands/savannas'},
+    habitat:' South Africa, grasslands/savannas',
+    img: '<img src="img/irl/zebra.jpg">'
+  },
   {when:'1894',
     why:'Overhunted for its fur by European settlers',
     name:'Sea Mink',
-    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts/off-shore islands'},
+    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts/off-shore islands',
+    img: '<img src="img/irl/otter.jpg">'
+  },
   {when:'1936',
     why:'Considered a threat to livestock and a danger to people',
     name:'Tasmanian Tiger',
-    habitat:' Australian Mainland/ wetlands/  grasslands/ dry eucalyptus'},
+    habitat:' Australian Mainland/ wetlands/  grasslands/ dry eucalyptus'
+  },
   {when:'1970',
     why:'Habitat modifications and the introduction of non-native species',
     name:'Tecopa Pupfish',
-    habitat:'Tecopa Hot Springs in California'},
+    habitat:'Tecopa Hot Springs in California'
+  },
   {when:'1980',
     why:'Poaching, habitat destruction and loss of prey',
     name:'Javan Tiger',
-    habitat:'Indonisia'},
+    habitat:'Indonisia'
+  },
   {when:'2011',
     why:'Poaching and farmers defending their crops',
     name:'West African Black Rhinoceros',
-    habitat:'savannahs and dry forests'}
+    habitat:'savannahs and dry forests'
+  }
 ]
 
 /*Place timeline about extinctions*/
@@ -74,5 +86,6 @@ for (category of categories){
     //console.log(detailsEls[i]);
     //Append the correct information
     detailsEls[i].append(animalInfo[i][category]);
+    console.log(category)
   }
 }
