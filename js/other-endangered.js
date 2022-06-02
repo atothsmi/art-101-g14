@@ -97,9 +97,9 @@ function disappearClick(id){
 };
 
 //Find Question Element
-var questionEl = $('#question');
+var responseEl = $('#response');
 
 //On click, summon info from api
-questionEl.one('click', function(){
+responseEl.one('click', function(){
   getAndPutData(endpoint);
 });

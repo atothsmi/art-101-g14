@@ -86,9 +86,7 @@ a:-webkit-any-link {
     margin-left: auto;
     margin-right: auto;
 
-    position: absolute;
-    left: 37%;
-    right: 37%;
+    position: relative;
 
     font-size: 100px;
     color: #FF00FF;
@@ -123,7 +121,7 @@ a:-webkit-any-link {
   -webkit-text-stroke: .25px white;
 }
 
-#restart {
+#restart, #response {
   display: flex;
   min-height: 100px;
   text-align: center;
@@ -153,9 +151,8 @@ a:-webkit-any-link {
   border-style: none;
   text-align: center;
   font-weight: normal;
-  margin: 6%;
+  margin: 1%;
   font-family: 'Monoton', cursive;
-  -webkit-text-stroke: 1px white;
 }
 
 #credits {
