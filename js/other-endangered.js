@@ -1,5 +1,7 @@
 /*
- * Contains API Call to US Fish and Wildlife Service of Endangered/Threatened species, Places Associated Information on Page
+ * Contains API Call to US Fish and Wildlife Service of Endangered/Threatened species
+ * Places Associated Information on Page
+ * Author: Alia Toth-Smith
  */
 
  //Define Endpoint
@@ -23,11 +25,10 @@
      //   all the action goes in here
      success: function(data) {
          // Get information from JSON object
-         console.log(data.data);
+         //show data slowly instead of all at once
          loadSlow(data)
          .then(
            function(value){
-             // disappearClick();
              console.log('done');
            },
            function(error){
@@ -54,8 +55,6 @@
    var currentAnimal = 0;
    var windowHeight = window.innerHeight;
    for (animal of data.data){
-     console.log(currentAnimal);
-     console.log(animal);
      //Construct Div to display data from API
      var display = '<div class="currently-endangered" id='+ currentAnimal + '>';
      //Add link to website with more info to animal Name
@@ -79,7 +78,6 @@
 
      //Show div after it has been moved
      $(idCurrentAnimal).show();
-     console.log($(idCurrentAnimal));
 
     //Give the newly created div an event
     disappearClick(idCurrentAnimal);
@@ -93,7 +91,7 @@
  }
 
 function disappearClick(id){
-  //console.log($('#' + num));
+  //add event on click to hide
   $(id).click(function(){
     $(id).hide();
   });

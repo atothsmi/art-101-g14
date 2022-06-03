@@ -133,11 +133,13 @@ function placeBalloons(){
 
 }
 
+//Find sfx audio element
 var audioSfxEl = $('#sfx1');
 
 function popClick(id){
-  //console.log($('#' + num));
+  //on click
   $(id).click(function(){
+    //if the sound effect is not playing, play sound and dissappear
     if (audioSfxEl[0].paused){
       audioSfxEl[0].play();
       $(id).hide();
@@ -145,9 +147,5 @@ function popClick(id){
   });
 };
 
+//Call the function that places the balloons
 placeBalloons()
-
-// .then(
-//  $('.balloons').on('click', function(){
-//    $('.balloons').hide();
-//  }));

@@ -1,13 +1,13 @@
 /*
  * Group 14
- * JS for site buttons and other miscellaneous events
+ * JS for site buttons
+ * Author: Alia Toth-Smith
 */
 
-//Function scrolls page forward 1 viewport
+//Function scrolls page forward 1 viewport width
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_scrollX
 function scrollForward(width) {
   window.scrollBy(width, 0);
-  //alert("pageXOffset: " + window.scrollX + ", scrollY: " + window.scrollY);
 }
 
 //Total number of full length divs - 1
@@ -15,18 +15,15 @@ var totalFullWidthDivs = 11-1;
 
 //Find Start Button
 var startButtonEl = $('#start');
-// console.log(startButtonEl);
 
 //Create boolean to see if start button has been clicked
 var startClicked = false;
 
 //Find body
 var bodyEl = $('body');
-// console.log(bodyEl);
 
 //Find html
 var htmlEl = $('html');
-// console.log(htmlEl);
 
 //Number of times advanced
 var timesAdvanced = 0;
@@ -41,14 +38,16 @@ instructEl.click(function(){
 
 //Find forward buttons
 var forwardEl = $('#forward');
+//Hide the button at first
 forwardEl.hide();
 
-//Scroll to right until at end
+//Scroll to right until at end when clicked
 forwardEl.click(function(){
-  // console.log('Button clicked')
+  //If not on the second to last page, scroll forward
   if (timesAdvanced < totalFullWidthDivs - 2 ){
     scrollForward(window.innerWidth);
     timesAdvanced += 1;
+  //Otherwise, stop showing and reset after scrolling forward once
   } else {
     scrollForward(window.innerWidth);
     startClicked = false;
@@ -60,12 +59,13 @@ forwardEl.click(function(){
 
 //Scroll screen full width to the right on start button click
 startButtonEl.click(function(){
-  // console.log('Button clicked')
+  //Allow the page to scroll
   htmlEl.addClass('smoothScroll');
-  //bodyEl.removeClass('stopHorizonatalScroll');
+  //Scroll forward once
   scrollForward(window.innerWidth);
+  //Signal the start button has been clicked
   startClicked = true;
-  //If there is background music playing
+  //If there is background music is playing
   if (playing == true){
     //Stop old background music
     audioBkgEl[0].pause();
@@ -73,26 +73,31 @@ startButtonEl.click(function(){
     audioBkg2El[0].play();
   };
 
+  //If background music is playing
   if (playing == true){
+    //Change appearance of button to on
     audioControlEl.html('Background Music: ON');
   } else {
+    //Change appearnce of button to off
     audioControlEl.html('Background Music: OFF');
   }
-  
+
   //Set audio button to control other track
   musicTrack = 1;
+  //Show forward button
   forwardEl.show();
+  //Hide instruction buttons
   instructEl.hide();
 });
 
 //Find restart buttons
 var restartEl = $('#restart');
-// console.log(bodyEl);
 
 //Scroll screen full width to the right
 restartEl.click(function(){
-  // console.log('Button clicked')
+  //Disable user scrolling
   htmlEl.removeClass('smoothScroll');
+  //Scroll back to the begining of the timeline
   scrollForward(-window.innerWidth * totalFullWidthDivs);
   //If audio is playing
   if (playing == true){
@@ -102,11 +107,12 @@ restartEl.click(function(){
     audioBkgEl[0].play();
   };
   //Set audio button to control other track
-  musicTrack = 0;
+  musicTrack = 0
+  //Show instructiosn
   instructEl.show();
 });
 
-//Make audio play and stop
+//Make audio play and stop controlled by a button
 
 //Find button controlling audio and hide it to start
 var audioControlEl = $('#audioControl');
@@ -124,7 +130,7 @@ var playing = true;
 
 //When control button is pushed, alternate pausing/playing sound
 audioControlEl.click(function(){
-  //Play track background-music
+  //Control the bkgmusic 1 if music track == 0
   if (musicTrack == 0){
     if (audioBkgEl[0].paused){
       audioBkgEl[0].play();
@@ -133,8 +139,7 @@ audioControlEl.click(function(){
       audioBkgEl[0].pause();
       playing = false;
     };
-    console.log(audioBkgEl[0].paused);
-    //Play track background music 2
+  // else control track background music 2
   } else {
     if (audioBkg2El[0].paused){
       audioBkg2El[0].play();
@@ -143,11 +148,12 @@ audioControlEl.click(function(){
       audioBkg2El[0].pause();
       playing = false;
     };
-    console.log(audioBkg2El[0].paused);
   };
 
+  //If music is playing, change appearnce of button to on
   if (playing == true){
     audioControlEl.html('Background Music: ON');
+  //Else turn it off
   } else {
     audioControlEl.html('Background Music: OFF');
   }

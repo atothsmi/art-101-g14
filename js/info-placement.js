@@ -8,26 +8,22 @@ var animalInfo = [
   {when:'1650 B.C.',
     why:'Climate change and hunting ',
     name:'Woolly Mammoth - Mammuthus primigenius',
-    habitat:'Tundra of Europe, Asia, and North America',
-    img: '<img src="img/irl/mammoth.jpg">'
+    habitat:'Tundra of Europe, Asia, and North America'
   },
   {when:'1768',
     why:'Climate change and overhunting by humans',
     name:'Stellers Sea Cow',
-    habitat:'Aleutians and the Kamchatka Penninula',
-    img: '<img src="img/irl/walrus.jpg">'
+    habitat:'Aleutians and the Kamchatka Penninula'
   },
   {when:'1883',
     why:'Overhunted to preserve feed for domesticated animals and for their hides',
     name:'Quagga',
-    habitat:' South Africa, grasslands/savannas',
-    img: '<img src="img/irl/zebra.jpg">'
+    habitat:' South Africa, grasslands/savannas'
   },
   {when:'1894',
     why:'Overhunted for its fur by European settlers',
     name:'Sea Mink',
-    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts/off-shore islands',
-    img: '<img src="img/irl/otter.jpg">'
+    habitat:'Atlantic Coast of North America, Massachusetts to Nova  Scotia, rocky coasts/off-shore islands'
   },
   {when:'1936',
     why:'Considered a threat to livestock and a danger to people',
