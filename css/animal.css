@@ -56,8 +56,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2%;
   height: auto;
-  width: 50vw;
+  width: 48vw;
 
   cursor: pointer;
 
@@ -67,6 +68,7 @@
    display: block;
    margin-left: auto;
    margin-right: auto;
+   margin-top: 5%;
    height: auto;
    width: 45vw;
 
@@ -78,6 +80,7 @@
     margin-left: auto;
     margin-right: auto;
     height: auto;
+    margin-top: 5%;
     width: 40vw;
 
     cursor: pointer;
@@ -88,6 +91,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
     height: auto;
     width: 50vw;
 
